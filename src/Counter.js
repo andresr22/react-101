@@ -26,12 +26,22 @@ class Counter extends React.Component {
         });
     }
 
+    sum2 = () => {
+        this.setState((previousState) => {
+            return {
+                ...previousState,
+                count: previousState.count + 2
+            }
+        });
+    }
+
     render() {
         return (
             <div>
                 {this.state.count}
                 <button onClick={this.add}>SUM</button>
                 <button onClick={this.subtract}>SUBTRACT</button>
+                <button onClick={this.sum2}>SUM2</button>
             </div>
         );
     }
